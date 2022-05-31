@@ -1,4 +1,5 @@
 {
+  "homepage": "https://akjapesh.github.io/color_pallete_app",
   "name": "color-app",
   "version": "0.1.0",
   "private": true,
@@ -33,7 +34,7 @@
       "not dead",
       "not op_mini all"
     ],
-    "homepage": "https://akjapesh.github.io/color_pallete_app",
+    
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
