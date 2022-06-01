@@ -57,7 +57,7 @@ function App() {
         changeCellColor={changeCellColor}
         style={{ margin: 20 }}
       />
-      <div className="center">
+      <div >
       <Reset matrixState={matrixState}  setMatrixState={setMatrixState} setStateIndex={setStateIndex} setStates={setStates}/>
       <Undo state={state} matrixState={matrixState}  setMatrixState={setMatrixState} stateIndex={stateIndex} setStateIndex={setStateIndex}  />
       <Redo state={state}  setMatrixState={setMatrixState} states={states} stateIndex={stateIndex} setStateIndex={setStateIndex} stateLastIndex={states.length-1}/>

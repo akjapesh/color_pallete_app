@@ -68,4 +68,5 @@ button {
 }
 .actions {
   display :inline-block!important;
+  left: 10;
 }
