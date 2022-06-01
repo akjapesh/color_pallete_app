@@ -2,13 +2,17 @@ import "../styles/App.css";
 import React, { useState, useEffect } from "react";
 
 ///Reset Component
-function Reset({ matrixState,setMatrixState, setStateIndex,setStates }) {
+function Reset({ matrixState, setMatrixState, setStateIndex, setStates }) {
   const numRows = 32,
     numCols = 32;
   function resetMatrix() {
-    setMatrixState(()=>{return Array.from({ length: numRows * numCols }, () => "#FFFFFF");})
+    setMatrixState(() => {
+      return Array.from({ length: numRows * numCols }, () => "#FFFFFF");
+    });
     setStateIndex(0);
-    setStates(()=>{return [Array.from({ length: numRows * numCols }, () => "#FFFFFF")];});
+    setStates(() => {
+      return [Array.from({ length: numRows * numCols }, () => "#FFFFFF")];
+    });
   }
   return (
     <div className="actions">
