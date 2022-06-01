@@ -11,18 +11,34 @@ function App() {
   const numRows = 32,
     numCols = 32;
   const [matrixState, setMatrixState] = useState(() => {
+    if (window.localStorage.getItem("matrixState"))
+      return JSON.parse(window.localStorage.getItem("matrixState"));
     return Array.from({ length: numRows * numCols }, () => "#FFFFFF");
   });
   const [states, setStates] = useState(() => {
+    if (window.localStorage.getItem("states"))
+      return JSON.parse(window.localStorage.getItem("states"));
     return [Array.from({ length: numRows * numCols }, () => "#FFFFFF")];
   });
-  const [stateIndex, setStateIndex] = useState(0);
+  const [stateIndex, setStateIndex] = useState(()=>{
+    if (window.localStorage.getItem("stateIndex"))
+      return window.localStorage.getItem("stateIndex");
+    return 0;});
+    
   const [presentColor, setPresentColor] = useState("#FFFFFF");
 
   const state = useMemo(() => states[stateIndex], [states, stateIndex]);
+
   useEffect(() => {
     setMatrixState(state);
   }, [state]);
+
+  useEffect(()=>{
+    window.localStorage.setItem("stateIndex",stateIndex);
+    window.localStorage.setItem("matrixState", JSON.stringify(matrixState));
+    window.localStorage.setItem("states", JSON.stringify(states));
+  },[stateIndex,matrixState,states])
+
   const setState = (value) => {
     if (isEqual(state, value)) {
       return;
