@@ -5,25 +5,25 @@ import Table from "./components/Table";
 import Reset from "./components/Reset";
 ///Main App Component
 function App() {
-  const num_rows = 32,
-    num_cols = 32;
-  const [matrixstate, setMatrixstate] = useState(() => {
-    return Array.from({ length: num_rows * num_cols }, () => "#FFFFFF");
+  const numRows = 32,
+    numCols = 32;
+  const [matrixState, setMatrixState] = useState(() => {
+    return Array.from({ length: numRows * numCols }, () => "#FFFFFF");
   });
 
-  const [presentcolor, setPresentcolor] = useState("#FFFFFF");
+  const [presentColor, setPresentColor] = useState("#FFFFFF");
 
-  function changecellcolor({ id, newcolor }) {
-    setMatrixstate((pr_state) => {
-      const new_state = [...pr_state];
-      new_state[id] = newcolor;
-      return new_state;
+  function changeCellColor({ id, newColor }) {
+    setMatrixState((previousState) => {
+      const newState = [...previousState];
+      newState[id] = newColor;
+      return newState;
     });
   }
 
-  function handleChangeComplete(pr_color) {
-    setPresentcolor(pr_color.hex);
-    console.log(pr_color.hex);
+  function handleChangeComplete(previousColor) {
+    setPresentColor(previousColor.hex);
+    console.log(previousColor.hex);
   }
 
   return (
@@ -33,12 +33,12 @@ function App() {
         <CirclePicker onChangeComplete={handleChangeComplete} />
       </div>
       <Table
-        presentcolor={presentcolor}
-        matrixstate={matrixstate}
-        changecellcolor={changecellcolor}
+        presentColor={presentColor}
+        matrixState={matrixState}
+        changeCellColor={changeCellColor}
         style={{ margin: 20 }}
       />
-      <Reset matrixstate={matrixstate} changecellcolor={changecellcolor} />
+      <Reset matrixState={matrixState} changeCellColor={changeCellColor} setMatrixState={setMatrixState} />
     </div>
   );
 }

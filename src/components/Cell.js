@@ -2,18 +2,18 @@ import "../styles/App.css";
 import React, { useState, useEffect } from "react";
 
 //Cell Component
-function Cell({ id, background_color, presentcolor, changecellcolor }) {
-  const [hovercolor, setHovercolor] = useState("#FFFFFF");
+function Cell({ id, backgroundColor, presentColor, changeCellColor }) {
+  const [hoverColor, setHoverColor] = useState("#FFFFFF");
   const onClick = () => {
     console.log(id);
-    changecellcolor({ id, newcolor: presentcolor });
+    changeCellColor({ id, newColor: presentColor });
   };
   const hoverIn = () => {
-    console.log(presentcolor);
-    setHovercolor(presentcolor);
+    console.log(presentColor);
+    setHoverColor(presentColor);
   };
   const hoverOut = () => {
-    setHovercolor("#FFFFFF");
+    setHoverColor("#FFFFFF");
     // setHovercolor(background_color);
   };
   return (
@@ -25,7 +25,7 @@ function Cell({ id, background_color, presentcolor, changecellcolor }) {
       style={{
         // backgroundColor: `${hovercolor}`
         backgroundColor: `${
-          hovercolor === "#FFFFFF" ? background_color : hovercolor
+          hoverColor === "#FFFFFF" ? backgroundColor : hoverColor
         }`,
       }}
     />
