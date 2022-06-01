@@ -1,13 +1,15 @@
-import "./App.css";
+import "../styles/App.css";
 import React, { useState, useEffect } from "react";
 
 //Cell Component
 function Cell({ id, background_color, presentcolor, changecellcolor }) {
   const [hovercolor, setHovercolor] = useState("#FFFFFF");
   const onClick = () => {
+    console.log(id);
     changecellcolor({ id, newcolor: presentcolor });
   };
   const hoverIn = () => {
+    console.log(presentcolor);
     setHovercolor(presentcolor);
   };
   const hoverOut = () => {
@@ -29,3 +31,5 @@ function Cell({ id, background_color, presentcolor, changecellcolor }) {
     />
   );
 }
+
+export default Cell;

@@ -1,6 +1,6 @@
-import "./App.css";
+import "../styles/App.css";
 import React, { useState, useEffect } from "react";
-import Cell from "./Cell.js";
+import Cell from "./Cell";
 
 //////Table Component
 function Table({ presentcolor, matrixstate, changecellcolor, style }) {
@@ -18,3 +18,4 @@ function Table({ presentcolor, matrixstate, changecellcolor, style }) {
     </div>
   );
 }
+export default Table;

@@ -1,9 +1,8 @@
-import "./App.css";
+import "./styles/App.css";
 import React, { useState, useEffect } from "react";
 import { CirclePicker } from "react-color";
-import Table from "./Table.js";
-import Reset from "./Reset.js";
-
+import Table from "./components/Table";
+import Reset from "./components/Reset";
 ///Main App Component
 function App() {
   const num_rows = 32,

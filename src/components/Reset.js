@@ -1,5 +1,6 @@
-import "./App.css";
+import "../styles/App.css";
 import React, { useState, useEffect } from "react";
+
 
 ///Reset Component
 function Reset({ matrixstate, changecellcolor }) {
@@ -16,3 +17,5 @@ function Reset({ matrixstate, changecellcolor }) {
     </div>
   );
 }
+
+export default Reset;
