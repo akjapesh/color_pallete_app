@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/color_pallete_app/static/css/main.2832e136.css",
-    "main.js": "/color_pallete_app/static/js/main.69c08a11.js",
+    "main.css": "/color_pallete_app/static/css/main.6652c863.css",
+    "main.js": "/color_pallete_app/static/js/main.83c7f102.js",
     "index.html": "/color_pallete_app/index.html",
-    "main.2832e136.css.map": "/color_pallete_app/static/css/main.2832e136.css.map",
-    "main.69c08a11.js.map": "/color_pallete_app/static/js/main.69c08a11.js.map"
+    "main.6652c863.css.map": "/color_pallete_app/static/css/main.6652c863.css.map",
+    "main.83c7f102.js.map": "/color_pallete_app/static/js/main.83c7f102.js.map"
   },
   "entrypoints": [
-    "static/css/main.2832e136.css",
-    "static/js/main.69c08a11.js"
+    "static/css/main.6652c863.css",
+    "static/js/main.83c7f102.js"
   ]
 }
