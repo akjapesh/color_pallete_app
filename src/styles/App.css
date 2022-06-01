@@ -52,7 +52,7 @@
 }
 
 .cell {
-  display: inline-block;
+  /* display: inline-block; */
   box-sizing: border-box;
   width: 16px;
   height: 16px;
@@ -66,6 +66,6 @@ button {
   padding: 15px 35px 15px 35px;
   cursor: pointer;
 }
-.actions{
-  display :inline-block;
+.actions {
+  display :inline-block!important;
 }
