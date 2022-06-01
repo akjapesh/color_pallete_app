@@ -11,7 +11,7 @@ function Table({ presentcolor, matrixstate, changecellcolor, style }) {
           key={id}
           id={id}
           background_color={value}
-          resentcolor={presentcolor}
+          presentcolor={presentcolor}
           changecellcolor={changecellcolor}
         />
       ))}

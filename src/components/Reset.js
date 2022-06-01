@@ -1,13 +1,12 @@
 import "../styles/App.css";
 import React, { useState, useEffect } from "react";
 
-
 ///Reset Component
 function Reset({ matrixstate, changecellcolor }) {
+  const num_rows = 32,
+    num_cols = 32;
   function resetmatrix() {
-    matrixstate.map((ele, id) => {
-      changecellcolor({ id, newcolor: "#FFFFFF" });
-    });
+    return Array.from({ length: num_rows * num_cols }, () => "#FFFFFF");
   }
   return (
     <div className="center">
